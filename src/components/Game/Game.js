@@ -10,12 +10,12 @@ const answer = sample(WORDS);
 console.info({ answer });
 
 function Game() {
-  const [guesses, setGuesses] = React.useState(['', '', '', '', '']);
+  const [guesses, setGuesses] = React.useState(['', '', '', '', '', '']);
   const [round, setRound] = React.useState(1)
 
   const handleSubmit = (guess) => {
 
-    if (round > 5) {
+    if (round > 6) {
       window.alert('Max rounds meet')
       setGuesses(['', '', '', '', ''])
       setRound(1)
