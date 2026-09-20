@@ -2,6 +2,7 @@ import React from "react";
 
 function GuessInput({ handleSubmit }) {
   const [guess, setGuess] = React.useState("");
+  
   return (
     <form className="guess-input-wrapper" onSubmit={(e) => {
       e.preventDefault();
@@ -13,7 +14,7 @@ function GuessInput({ handleSubmit }) {
         id="guess-input"
         type="text"
         value={guess}
-        onChange={(e) => setGuess(e.target.value)}
+        onChange={(e) => setGuess(e.target.value.toLocaleUpperCase())}
         maxLength={5}
         pattern="[a-zA-Z]{5}"
       />
