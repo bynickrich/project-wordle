@@ -21,7 +21,7 @@ function Game() {
     setGuesses(["", "", "", "", "", ""]);
     setRound(1);
     answer = sample(WORDS);
-    console.log(answer);
+    console.log({ answer });
     return;
   };
 
