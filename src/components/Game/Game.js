@@ -25,7 +25,8 @@ function Game() {
   };
 
   const handleSubmit = (guess) => {
-    if (guesses.length + 1 >= NUM_OF_GUESSES_ALLOWED) {
+    const nextGuesses = [...guesses, guess];
+    if (nextGuesses.length >= NUM_OF_GUESSES_ALLOWED) {
       setGameState("LOOSER");
     }
 
@@ -33,7 +34,7 @@ function Game() {
       setGameState("WINNER");
     }
 
-    setGuesses([...guesses, guess]);
+    setGuesses(nextGuesses);
   };
 
   return (
